@@ -1,11 +1,9 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
-import java.util.Date;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -20,6 +18,6 @@ public class DeliveryTesting {
         $("[name=phone]").setValue("+79157809999");
         $(".checkbox__box").click();
         $(".button").click();
-        $("[data-test-id=\"notification\"]").shouldBe(Condition.visible, Duration.ofSeconds(10));
+        $("[data-test-id=\"notification\"]").shouldBe(Condition.visible, Duration.ofSeconds(15));
     }
 }
